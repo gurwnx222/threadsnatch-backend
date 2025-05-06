@@ -6,10 +6,10 @@ const app = express();
 const port = 3000;
 
 app.use(express.json());
+connectToDatabase();
 
 app.get("/", (req, res) => {
-  res.send("Hello World!");
-  connectToDatabase();
+  res.send("The email server is up and connected to email DB !");
 });
 app.use("/api", router);
 
